@@ -3,72 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>My Portfolio | IT Student</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">YourName</a>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="pages/projects.html" class="nav-link">Projects</a></li>
-                <li><a href="pages/programmes.html" class="nav-link">Programmes</a></li>
-                <li><a href="pages/achievements.html" class="nav-link">Achievements</a></li>
-                <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        <div class="container">
+            <a href="index.html" class="logo">MyPortfolio</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="pages/projects.html" class="nav-link"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="pages/programmes.html" class="nav-link"><i class="fas fa-graduation-cap"></i> Programmes</a></li>
+                <li><a href="pages/achievements.html" class="nav-link"><i class="fas fa-trophy"></i> Achievements</a></li>
+                <li><a href="pages/contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="fade-in">Hello, I'm <span class="highlight">[Your Name]</span></h1>
-            <h2 class="fade-in">IT Student | Cybersecurity Enthusiast | Future Software Developer</h2>
-            <p class="fade-in">Currently pursuing a Diploma in IT with strong interest in Cybersecurity, Artificial Intelligence, and Software Development. Seeking opportunities to apply technical skills in real-world scenarios.</p>
-            <a href="pages/projects.html" class="btn fade-in">View My Work</a>
-        </div>
-    </section>
-
-    <section class="about">
+    <!-- Hero Section -->
+    <header class="hero">
         <div class="container">
-            <h2>About Me</h2>
-            <div class="about-grid">
-                <div class="about-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>Education</h3>
-                    <p>Common ICT / Diploma in IT-related studies</p>
-                    <p>Expected Graduation: 2026</p>
+            <div class="hero-content">
+                <h1 class="fade-in">Hello, I'm <span class="highlight">[Your Name]</span></h1>
+                <h2 class="fade-in">Diploma in Information Technology Student</h2>
+                <p class="fade-in">Passionate about cybersecurity, AI, and software development. Currently building foundational skills through coursework, programmes, and hands-on projects.</p>
+                <a href="pages/projects.html" class="btn fade-in">
+                    <i class="fas fa-arrow-right"></i> View My Projects
+                </a>
+            </div>
+            <div class="hero-image fade-in">
+                <div class="image-placeholder">
+                    <i class="fas fa-laptop-code"></i>
+                    <p>Student Portfolio</p>
                 </div>
-                <div class="about-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Technical Skills</h3>
-                    <p>Programming: Python, JavaScript, HTML, CSS</p>
-                    <p>Cybersecurity Fundamentals</p>
-                    <p>Web Development</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Highlights -->
+    <section class="highlights">
+        <div class="container">
+            <h2 class="section-title">Quick Highlights</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>3rd Place in Cyber Sports Day CTF competition</p>
+                    <span class="highlight-tag">770 points</span>
                 </div>
-                <div class="about-card">
-                    <i class="fas fa-bullseye"></i>
-                    <h3>Career Goals</h3>
-                    <p>Aspire to specialize in Cybersecurity and Artificial Intelligence</p>
-                    <p>Plan to pursue university studies and a specialized IT career</p>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Built this portfolio website using HTML, CSS & JavaScript</p>
+                    <span class="highlight-tag">IT1x25 Project</span>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Achievements</h3>
+                    <p>NYAA Silver Award & Overseas Programme Excellence</p>
+                    <span class="highlight-tag">Certified</span>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Student Profile</h3>
+                    <p>I am a dedicated Diploma in Information Technology student with a strong interest in cybersecurity and software development. Through coursework and extracurricular programmes, I've developed practical skills in programming, web technologies, and cybersecurity fundamentals.</p>
+                    
+                    <h4>Technical Skills</h4>
+                    <div class="skills-list">
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Cybersecurity Basics</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Web Development</span>
+                    </div>
+                    
+                    <h4>Currently Learning</h4>
+                    <ul>
+                        <li>Advanced JavaScript concepts</li>
+                        <li>Cybersecurity threat analysis</li>
+                        <li>Responsive web design principles</li>
+                        <li>Project documentation</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">3rd</div>
+                        <div class="stat-label">CTF Competition</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Years in IT Diploma</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Assignment Focused</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 [Your Name]. All rights reserved.</p>
-            <p>Portfolio created for IT1x25 assignment</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Student Digital Portfolio</h3>
+                    <p>Created for IT1x25 Personal Portfolio Assignment</p>
+                    <p>All content is based on actual completed experiences and achievements</p>
+                </div>
+                <div class="footer-links">
+                    <a href="pages/contact.html" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Resume (PDF)</a>
+                    <span class="footer-link">Updated: February 2026</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 [Your Name]. This portfolio is part of academic coursework.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
