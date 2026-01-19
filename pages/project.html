@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Your Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Same navigation as index.html -->
+    </nav>
+
+    <section class="projects">
+        <div class="container">
+            <h1>My Projects</h1>
+            
+            <!-- Cyber Sports Day CTF -->
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <h2>Cyber Sports Day – Capture The Flag (CTF)</h2>
+                    <span class="badge">🥉 3rd Place</span>
+                </div>
+                <div class="project-content">
+                    <p>Participated in Cyber Sports Day under the Sentinel Programme, competing in a cybersecurity Capture-the-Flag competition with team THE ROOK.</p>
+                    <div class="project-details">
+                        <p><strong>Achievement:</strong> 3rd Place with 770 points</p>
+                        <p><strong>Skills Demonstrated:</strong> Technical problem-solving under time pressure, team collaboration, applied cybersecurity fundamentals</p>
+                    </div>
+                    
+                    <!-- Image Gallery -->
+                    <div class="image-gallery">
+                        <h3>Evidence</h3>
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="../assets/images/cyber-sports/scoreboard.png" 
+                                     alt="CTF Scoreboard showing 3rd place and 770 points" 
+                                     class="lightbox-trigger"
+                                     data-caption="CTF Competition Scoreboard - 3rd Place with 770 points">
+                                <p class="caption">Scoreboard showing 3rd place / 770 points</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../assets/images/cyber-sports/competition.png" 
+                                     alt="CTF competition interface" 
+                                     class="lightbox-trigger"
+                                     data-caption="CTF Competition Interface - Team THE ROOK">
+                                <p class="caption">Event screen / challenge screen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Development Project -->
+            <div class="project-card fade-in">
+                <div class="project-header">
+                    <h2>Web Development Project (IT1x25)</h2>
+                    <span class="badge">Portfolio Website</span>
+                </div>
+                <div class="project-content">
+                    <p>Designed and developed a personal website as a digital portfolio, applying HTML, CSS, and basic frontend structuring.</p>
+                    
+                    <button class="expand-btn">View Project Details <i class="fas fa-chevron-down"></i></button>
+                    
+                    <div class="expandable-content">
+                        <h4>What I Learned:</h4>
+                        <ul>
+                            <li>Website structure and semantic HTML</li>
+                            <li>CSS styling and responsive design</li>
+                            <li>Content presentation and user experience</li>
+                            <li>Deployment using GitHub Pages</li>
+                        </ul>
+                        
+                        <!-- Website Screenshots -->
+                        <div class="image-gallery">
+                            <h4>Website Screenshots:</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="../assets/images/website/homepage.png" 
+                                         alt="Portfolio website homepage" 
+                                         class="lightbox-trigger"
+                                         data-caption="Portfolio Homepage - Clean and professional design">
+                                    <p class="caption">Homepage design</p>
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../assets/images/website/projects-page.png" 
+                                         alt="Portfolio projects page" 
+                                         class="lightbox-trigger"
+                                         data-caption="Projects Page - Showcasing technical work">
+                                    <p class="caption">Projects page layout</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
