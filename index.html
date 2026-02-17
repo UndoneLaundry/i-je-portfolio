@@ -1,159 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | IT Student</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Je Tan · structured systems</title>
+  <!-- style.css contains all base, layout, interactive enhancements, and responsive rules -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome for icons – clean and minimal -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- small additions for hero eyebrow and featured card accent -->
+  <style>
+    .hero-eyebrow {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      font-weight: 300;
+    }
+    .featured-project-card {
+      border-left: 4px solid var(--border-light);
+    }
+    .cta-intro {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">MyPortfolio</a>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="pages/projects.html" class="nav-link"><i class="fas fa-code"></i> Projects</a></li>
-                <li><a href="pages/programmes.html" class="nav-link"><i class="fas fa-graduation-cap"></i> Programmes</a></li>
-                <li><a href="pages/achievements.html" class="nav-link"><i class="fas fa-trophy"></i> Achievements</a></li>
-                <li><a href="pages/contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+  <!-- fixed minimal navbar (will change on scroll) -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="index.html">I Je Tan</a>
+      </div>
+      <button class="mobile-nav-toggle" aria-label="menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav">
+        <ul>
+          <li><a href="pages/projects.html">Work</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO with subtle floating shape – staggered fade‑in -->
+    <section class="hero section-padding">
+      <div class="container hero-container">
+        <div class="hero-text">
+          <p class="hero-eyebrow fade-in">I Je Tan</p>
+          <h1 class="hero-title fade-in delay-1">Building structured,<br>scalable digital systems.</h1>
+          <p class="hero-statement fade-in delay-2">developer · system thinker · clarity over complexity<br>crafting interfaces and logic with intentional architecture.</p>
+        </div>
+        <!-- decorative shape (barely visible, adds depth) -->
+        <div class="hero-shape" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECT (with left accent border) -->
+    <section class="featured-project section-padding fade-in">
+      <div class="container">
+        <h2 class="section-title">featured project</h2>
+        <div class="project-card interactive-card featured-project-card">
+          <h3 class="project-name">TechMatch</h3>
+          <p class="project-role">role · design & frontend architecture</p>
+          <p class="project-description">A matching platform that connects developers with tech opportunities based on stack affinity. Structured data layer, clean UI, and scalable component logic.</p>
+          <a href="pages/projects.html" class="button subtle-button arrow-button">view case study <span class="arrow-icon">→</span></a>
+          <span class="card-underline"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS OVERVIEW with hover-lift cards & icons -->
+    <section class="skills section-padding fade-in">
+      <div class="container">
+        <h2 class="section-title">disciplines & tools</h2>
+        <div class="skills-grid">
+          <div class="skill-category interactive-card">
+            <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
+            <h3>frontend</h3>
+            <ul>
+              <li>HTML / CSS (flex, grid)</li>
+              <li>JavaScript (vanilla)</li>
+              <li>responsive architecture</li>
             </ul>
+          </div>
+          <div class="skill-category interactive-card">
+            <div class="skill-icon"><i class="fas fa-server"></i></div>
+            <h3>backend</h3>
+            <ul>
+              <li>Node.js · Express</li>
+              <li>REST API design</li>
+              <li>database modeling</li>
+            </ul>
+          </div>
+          <div class="skill-category interactive-card">
+            <div class="skill-icon"><i class="fas fa-tools"></i></div>
+            <h3>tools</h3>
+            <ul>
+              <li>Git · GitHub</li>
+              <li>Figma (for precision)</li>
+              <li>testing · debugging</li>
+            </ul>
+          </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="fade-in">Hello, I'm <span class="highlight">[Your Name]</span></h1>
-                <h2 class="fade-in">Diploma in Information Technology Student</h2>
-                <p class="fade-in">Passionate about cybersecurity, AI, and software development. Currently building foundational skills through coursework, programmes, and hands-on projects.</p>
-                <a href="pages/projects.html" class="btn fade-in">
-                    <i class="fas fa-arrow-right"></i> View My Projects
-                </a>
-            </div>
-            <div class="hero-image fade-in">
-                <div class="image-placeholder">
-                    <i class="fas fa-laptop-code"></i>
-                    <p>Student Portfolio</p>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Quick Highlights -->
-    <section class="highlights">
-        <div class="container">
-            <h2 class="section-title">Quick Highlights</h2>
-            <div class="highlights-grid">
-                <div class="highlight-card">
-                    <div class="highlight-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Cybersecurity</h3>
-                    <p>3rd Place in Cyber Sports Day CTF competition</p>
-                    <span class="highlight-tag">770 points</span>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Built this portfolio website using HTML, CSS & JavaScript</p>
-                    <span class="highlight-tag">IT1x25 Project</span>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>Achievements</h3>
-                    <p>NYAA Silver Award & Overseas Programme Excellence</p>
-                    <span class="highlight-tag">Certified</span>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Student Profile</h3>
-                    <p>I am a dedicated Diploma in Information Technology student with a strong interest in cybersecurity and software development. Through coursework and extracurricular programmes, I've developed practical skills in programming, web technologies, and cybersecurity fundamentals.</p>
-                    
-                    <h4>Technical Skills</h4>
-                    <div class="skills-list">
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Cybersecurity Basics</span>
-                        <span class="skill-tag">Git/GitHub</span>
-                        <span class="skill-tag">Web Development</span>
-                    </div>
-                    
-                    <h4>Currently Learning</h4>
-                    <ul>
-                        <li>Advanced JavaScript concepts</li>
-                        <li>Cybersecurity threat analysis</li>
-                        <li>Responsive web design principles</li>
-                        <li>Project documentation</li>
-                    </ul>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-number">3rd</div>
-                        <div class="stat-label">CTF Competition</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">2+</div>
-                        <div class="stat-label">Years in IT Diploma</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Assignment Focused</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- CTA with context line, pulse effect & inline social link -->
+    <section class="cta-section section-padding fade-in">
+      <div class="container">
+        <p class="cta-intro">Interested in working together?</p>
+        <a href="pages/projects.html" class="button primary-button pulse-glow">explore full work</a>
+        <p class="footer-contact-note">also find me on 
+          <a href="https://www.linkedin.com/in/i-je-tan-664013350/" target="_blank" rel="noopener noreferrer" class="inline-social">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+          </a>
+        </p>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Student Digital Portfolio</h3>
-                    <p>Created for IT1x25 Personal Portfolio Assignment</p>
-                    <p>All content is based on actual completed experiences and achievements</p>
-                </div>
-                <div class="footer-links">
-                    <a href="pages/contact.html" class="footer-link">Contact</a>
-                    <a href="#" class="footer-link">Resume (PDF)</a>
-                    <span class="footer-link">Updated: February 2026</span>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 [Your Name]. This portfolio is part of academic coursework.</p>
-            </div>
-        </div>
-    </footer>
+  <!-- footer with social icons -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2025 I Je Tan — structured by intention</p>
+      <p class="footer-links">
+        <a href="https://www.linkedin.com/in/i-je-tan-664013350/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/UndoneLaundry" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </p>
+    </div>
+  </footer>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+  <!-- main.js: mobile nav toggle, scroll animations, header scroll effect -->
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Je Tan · work & credentials</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Temporary styles that should eventually be merged into style.css -->
+  <style>
+    /* Shared component styles – to be moved to style.css */
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    .tech-tag {
+      background: var(--soft-gray);
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      color: var(--text);
+      border: 1px solid var(--border-light);
+    }
+    .project-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    .project-thumb {
+      width: 100%;
+      max-width: 160px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid var(--border-light);
+      transition: transform 0.2s;
+    }
+    .project-thumb:hover {
+      transform: scale(1.05);
+      box-shadow: var(--hover-shadow);
+    }
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      margin: 1.5rem 0 0.5rem;
+      flex-wrap: wrap;
+    }
+    .project-links .button {
+      padding: 0.5rem 1.2rem;
+      font-size: 0.9rem;
+    }
+    .programme-desc {
+      margin: 1rem 0;
+      color: var(--text-muted);
+    }
+    .inline-link {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border-light);
+      transition: border-color 0.2s;
+    }
+    .inline-link:hover {
+      border-color: var(--text);
+    }
+    .cert-issuer {
+      font-size: 0.9rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .cert-desc {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .full-width {
+      grid-column: 1 / -1;
+    }
+    .featured-project-card {
+      border-left: 4px solid var(--border-light);
+    }
+    /* Certifications grid: three columns on large screens */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+    @media (max-width: 768px) {
+      .certs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .certs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* Ensure programmes grid matches style.css */
+    .programmes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    @media (max-width: 640px) {
+      .programmes-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="../index.html">I Je Tan</a>
+      </div>
+      <button class="mobile-nav-toggle" aria-label="menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav">
+        <ul>
+          <li><a href="projects.html" class="active">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-padding fade-in" style="padding-bottom: 2rem;">
+      <div class="container">
+        <h1 class="hero-title" style="font-size: 3.5rem;">work & credentials</h1>
+        <p class="hero-statement">projects · programmes · certifications</p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section-padding fade-in">
+      <div class="container">
+        <h2 class="section-title">projects</h2>
+
+        <!-- Featured project: TechMatch (60/40 layout) -->
+        <div class="featured-project-wrapper">
+          <div class="project-card featured-card interactive-card featured-project-card" id="techmatch">
+            <div class="featured-card-content">
+              <h3 class="project-name">TechMatch</h3>
+              <p class="project-role">web application · full stack contribution</p>
+              <p class="project-description">
+                Developed core account and administrative logic for a technician-business matching platform.
+                Implemented authentication, RBAC, admin approval flow, role-based dashboards, and inline PDF preview.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Authentication</span>
+                <span class="tech-tag">RBAC</span>
+                <span class="tech-tag">Conditional Rendering</span>
+                <span class="tech-tag">Backend Logic</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/UndoneLaundry/techmatch" target="_blank" class="button subtle-button"><i class="fab fa-github"></i> repo</a>
+              </div>
+            </div>
+            <div class="project-images featured-images">
+              <a href="../assets/techmatch-registration.png" target="_blank"><img src="../assets/techmatch-registration.png" alt="TechMatch registration page" class="project-thumb"></a>
+              <a href="../assets/techmatch-pdf-preview.png" target="_blank"><img src="../assets/techmatch-pdf-preview.png" alt="TechMatch PDF preview" class="project-thumb"></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Remaining projects in 2‑column grid -->
+        <div class="projects-grid">
+          <!-- QoL Power BI -->
+         <div class="project-card interactive-card" id="qol">
+            <h3 class="project-name">Quality of Life & Social Indicators</h3>
+            <p class="project-role">data analytics · Power BI</p>
+            <p class="project-description">
+              Individual project analysing Singapore's quality of life beyond economic metrics. Built an interactive Power BI dashboard with data cleansing, indicator normalisation, and a composite QoL Index. Benchmarked Singapore against global peers.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Power Query</span>
+              <span class="tech-tag">Data Storytelling</span>
+            </div>
+            <div class="project-images">
+              <a href="../assets/qol-dashboard-overview.png" target="_blank"><img src="../assets/qol-dashboard-overview.png" alt="QoL dashboard overview" class="project-thumb"></a>
+              <a href="../assets/qol-indicators.png" target="_blank"><img src="../assets/qol-indicators.png" alt="QoL indicators" class="project-thumb"></a>
+              <a href="../assets/qol-benchmarking.png" target="_blank"><img src="../assets/qol-benchmarking.png" alt="QoL benchmarking" class="project-thumb"></a>
+            </div>
+          </div>
+
+          <!-- UX/UI Practice -->
+          <div class="project-card interactive-card">
+            <h3 class="project-name">UX/UI Practice Project</h3>
+            <p class="project-role">frontend design · concept only</p>
+            <p class="project-description">
+              Practice exercise focused on interface design, layout, and visual consistency. Explored modern UI patterns, responsive layouts, and user flows without backend logic.
+            </p>
+            <div class="project-images">
+              <a href="../assets/uxui-cover.png" target="_blank"><img src="../assets/uxui-cover.png" alt="UX/UI cover page" class="project-thumb"></a>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/UndoneLaundry/UXUI-Project-Y1-S1" target="_blank" class="button subtle-button"><i class="fab fa-github"></i> repo</a>
+              <a href="https://undonelaundry.github.io/UXUI-Project-Y1-S1/" target="_blank" class="button subtle-button"><i class="fas fa-external-link-alt"></i> live</a>
+            </div>
+          </div>
+
+          <!-- Statistical Research -->
+          <div class="project-card interactive-card">
+            <h3 class="project-name">Social Media & Sleep Duration</h3>
+            <p class="project-role">statistical research · quantitative study</p>
+            <p class="project-description">
+              Investigated the relationship between social media usage and sleep duration among polytechnic students using two hypothesis tests. Full research write-up including limitations and future directions.
+            </p>
+            <div class="project-links">
+              <a href="../assets/research-report.pdf" target="_blank" class="button subtle-button"><i class="fas fa-file-pdf"></i> full report</a>
+              <a href="../assets/research-limitations.pdf" target="_blank" class="button subtle-button"><i class="fas fa-file-pdf"></i> limitations</a>
+            </div>
+          </div>
+
+          <!-- Cybersecurity Ransomware -->
+          <div class="project-card interactive-card">
+            <h3 class="project-name">Ransomware Awareness</h3>
+            <p class="project-role">cybersecurity · educational video & slides</p>
+            <p class="project-description">
+              Created a short video and slide deck explaining ransomware: how it works, prevention, and response. Developed as part of cybersecurity exploration.
+            </p>
+            <div class="project-links">
+              <a href="../assets/ransomware-video.mp4" target="_blank" class="button subtle-button"><i class="fas fa-video"></i> video</a>
+              <a href="../assets/ransomware-slides.pdf" target="_blank" class="button subtle-button"><i class="fas fa-file-pdf"></i> slides</a>
+            </div>
+          </div>
+
+          <!-- Portfolio Website (this site) -->
+          <div class="project-card interactive-card">
+            <h3 class="project-name">Portfolio Website</h3>
+            <p class="project-role">frontend development · design</p>
+            <p class="project-description">
+              This very site – a custom-built, responsive portfolio to present projects, programmes, and certifications. Designed with a soft, structured aesthetic, featuring interactive cards, mobile navigation, and scroll animations. Built with HTML, CSS, and vanilla JavaScript.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3 (Flex/Grid)</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Responsive Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMMES -->
+    <section class="section-padding fade-in" style="background: var(--soft-gray);">
+      <div class="container">
+        <h2 class="section-title">programmes & achievements</h2>
+        <div class="programmes-grid">
+
+          <!-- Sentinel Programme (full width) -->
+          <div class="skill-category interactive-card full-width">
+            <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Sentinel Programme (DIS)</h3>
+            <p class="programme-desc">
+              Talent development programme by the Digital and Intelligence Service, equipping youths with cybersecurity and digital skills. Attend workshops, classes, internships, and mentorship with defence agencies.
+            </p>
+            <p><strong>Structure:</strong> Secondary to JC/Poly – topics from web development to network forensics, AI in security.</p>
+            <p><a href="https://www.dis.gov.sg/sentinel-programme/" target="_blank" class="inline-link">learn more <i class="fas fa-external-link-alt"></i></a></p>
+          </div>
+
+          <!-- Cyber Sports Day CTF -->
+          <div class="skill-category interactive-card">
+            <div class="skill-icon"><i class="fas fa-flag"></i></div>
+            <h3>Cyber Sports Day CTF 2025</h3>
+            <p class="programme-desc">
+              First Sentinel Capture the Flag competition for Year 5 students. Achieved <strong>2nd Runner-up (Poly/ITE category)</strong> with teammates Azlan Chenlong Bin Mohammad Noh, Tay Jing Rui, Toh Yu Hui.
+            </p>
+            <div class="project-images">
+              <a href="../assets/cyber-sports-day-2nd-runner-up.jpg" target="_blank"><img src="../assets/cyber-sports-day-2nd-runner-up.jpg" alt="Cyber Sports Day 2nd Runner Up certificate/photo" class="project-thumb"></a>
+            </div>
+            <p><a href="https://www.dis.gov.sg/sentinel-programme/hall-of-fame/#d2edf94ed425b3a6cf0a64f79916a2fe" target="_blank" class="inline-link">hall of fame <i class="fas fa-external-link-alt"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section-padding fade-in">
+      <div class="container">
+        <h2 class="section-title">certifications</h2>
+        <div class="certs-grid">
+
+          <!-- IBM UX Design -->
+          <div class="skill-category interactive-card">
+            <div class="skill-icon"><i class="fas fa-pencil-ruler"></i></div>
+            <h3>UX Design Fundamentals</h3>
+            <p class="cert-issuer">IBM SkillsBuild</p>
+            <p class="cert-desc">User personas, wireframes, prototyping, usability testing, case study analysis.</p>
+            <p><a href="https://www.credly.com/badges/f525b334-cdba-4f90-a1a3-0f30c2fc93a5/linked_in_profile" target="_blank" class="inline-link">view credential <i class="fas fa-external-link-alt"></i></a></p>
+          </div>
+
+          <!-- IBM Web Dev -->
+          <div class="skill-category interactive-card">
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+            <h3>Web Development Fundamentals</h3>
+            <p class="cert-issuer">IBM SkillsBuild</p>
+            <p class="cert-desc">HTML, CSS, JavaScript, interactive website development in simulated IDE.</p>
+            <p><a href="https://www.credly.com/badges/cd83102c-6550-47be-b5c3-f30fd322b0cd/linked_in_profile" target="_blank" class="inline-link">view credential <i class="fas fa-external-link-alt"></i></a></p>
+          </div>
+
+          <!-- AWS Cloud Practitioner Essentials -->
+          <div class="skill-category interactive-card">
+            <div class="skill-icon"><i class="fab fa-aws"></i></div>
+            <h3>AWS Cloud Practitioner Essentials</h3>
+            <p class="cert-issuer">Amazon Web Services</p>
+            <p class="cert-desc">Foundational understanding of AWS cloud concepts, services, pricing, and security.</p>
+          </div>
+
+          <!-- AWS Academy Cloud Foundations -->
+          <div class="skill-category interactive-card">
+            <div class="skill-icon"><i class="fab fa-aws"></i></div>
+            <h3>AWS Academy Graduate - Cloud Foundations</h3>
+            <p class="cert-issuer">AWS Training and Certification</p>
+            <p class="cert-desc">Training badge for completing the AWS Academy Cloud Foundations course.</p>
+            <p><a href="https://www.credly.com/badges/51667283-7613-48c1-99a2-b7a99ad4d96f/linked_in_profile" target="_blank" class="inline-link">view credential <i class="fas fa-external-link-alt"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2025 I Je Tan — structured by intention</p>
+      <p class="footer-links">
+        <a href="https://www.linkedin.com/in/i-je-tan-664013350/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/UndoneLaundry" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
