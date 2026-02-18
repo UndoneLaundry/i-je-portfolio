@@ -138,6 +138,10 @@ h1, h2, h3, .section-title, .project-name {
   font-family: var(--font-heading);
 }
 
+.primary-nav {
+  display: flex;
+}
+
 .primary-nav ul {
   display: flex;
   gap: 2.5rem;
@@ -189,17 +193,19 @@ h1, h2, h3, .section-title, .project-name {
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  z-index: 200;
+  position: relative;
+  z-index: 10000;
 }
 
 .mobile-nav-toggle span {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
   background: var(--text);
   margin: 5px 0;
   transition: var(--transition);
   border-radius: 2px;
+  transform-origin: center;
 }
 
 /* ---------- INTERACTIVE COMPONENTS ---------- */
@@ -561,16 +567,16 @@ h1, h2, h3, .section-title, .project-name {
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 3.5rem;
+    font-size: clamp(2.2rem, 9vw, 3.5rem);
   }
   .hero-tagline {
-    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 4vw, 1.5rem);
   }
   .hero-statement {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
   }
   .project-card {
-    padding: 1.8rem;
+    padding: 1.5rem;
   }
   .skills-grid {
     gap: 1.5rem;
@@ -580,72 +586,96 @@ h1, h2, h3, .section-title, .project-name {
     text-align: center;
   }
   .hero-shape {
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
     top: 0;
+    opacity: 0.5;
   }
   .featured-card {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 2rem;
+    padding: 1.5rem;
   }
   .featured-card .project-images {
     justify-content: center;
   }
   .featured-card .project-name {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .project-name {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+  .section-title {
+    font-size: clamp(1.4rem, 5vw, 2rem);
   }
 }
+
+/* Mobile overlay is built and styled via JS — no CSS needed here */
 
 @media (max-width: 640px) {
   .mobile-nav-toggle {
     display: block;
+    padding: 0.75rem;
+    margin: -0.75rem;
   }
 
+  /* Hide desktop nav on mobile */
   .primary-nav {
-    position: fixed;
-    inset: 0;
-    background: rgba(248,250,252,0.98);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    transform: translateY(-100%);
-    transition: transform 0.4s ease-in-out;
-    pointer-events: none;
-    z-index: 150;
+    display: none;
   }
 
-  .primary-nav[data-visible="true"] {
-    transform: translateY(0);
-    pointer-events: auto;
-  }
-
-  .primary-nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .primary-nav a {
-    font-size: 2rem;
-    font-weight: var(--font-weight-light);
-  }
-
+  /* Symmetrical X — span height 2px + margin 5px each side = 7px offset */
   .mobile-nav-toggle[aria-expanded="true"] span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: translateY(7px) rotate(45deg);
   }
   .mobile-nav-toggle[aria-expanded="true"] span:nth-child(2) {
     opacity: 0;
+    transform: scaleX(0);
   }
   .mobile-nav-toggle[aria-expanded="true"] span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+    transform: translateY(-7px) rotate(-45deg);
   }
 
   .projects-grid,
   .programmes-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Full-width thumbnails on mobile */
+  .project-thumb {
+    max-width: 100% !important;
+    height: 160px !important;
+  }
+
+  /* Stack button groups vertically */
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Bigger tap targets on buttons */
+  .button {
+    padding: 1rem 2rem;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Fix hero title on inner pages */
+  .page-hero-title {
+    font-size: clamp(2rem, 8vw, 3.5rem) !important;
+  }
+
+  /* Prevent text overflow */
+  .hero-title,
+  .hero-statement,
+  .project-description {
+    word-break: break-word;
+  }
+
+  /* Fix container padding on very small screens */
+  .container {
+    padding: 0 16px;
   }
 }
